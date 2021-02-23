@@ -21,7 +21,7 @@ class CreateDonorsTable extends Migration
             $table->string('cpf');
             $table->string('phone');
             $table->string('address');
-            $table->string('dt_birth');            
+            $table->date('dt_birth');            
             $table->string('password');
             $table->rememberToken();
             $table->timestamps();            
