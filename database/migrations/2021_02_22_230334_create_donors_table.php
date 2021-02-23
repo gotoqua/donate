@@ -24,7 +24,7 @@ class CreateDonorsTable extends Migration
             $table->string('dt_birth');            
             $table->string('password');
             $table->rememberToken();
-            $table->timestamps();
+            $table->timestamps();            
         });
     }
 

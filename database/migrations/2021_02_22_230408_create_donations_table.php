@@ -15,10 +15,12 @@ class CreateDonationsTable extends Migration
     {
         Schema::create('donations', function (Blueprint $table) {
             $table->id();
+            $table->unsignedInteger('id_donor');
+            $table->foreign('id_donor')->reference('id')->on('donors');
             $table->string('donate_interval');
             $table->decimal('value_donate', 19, 2);
             $table->string('form_pay');
-            $table->timestamps();
+            $table->timestamps();            
         });
     }
 
