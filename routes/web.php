@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\DonationsController;
+use App\Http\Controllers\DonorsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,6 +19,6 @@ Route::get('/', function () {
     return view('donate');
 });
 
-Auth::routes();
+Route::resource('donations', DonationsController::class);
+Route::resource('donors', DonorsController::class);
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
